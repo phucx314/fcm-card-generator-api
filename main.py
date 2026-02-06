@@ -7,6 +7,10 @@ import os
 
 app = FastAPI()
 
+@app.get("/gnip")
+async def keep_alive():
+    return {"status": "I am alive!", "message": "Server vẫn sống nhăn răng"}
+
 # --- 1. CẤU HÌNH FONT ---
 FONT_DIR = "fonts"
 # M chỉ cần 2 file này (hoặc 1 file dùng chung cũng được)
